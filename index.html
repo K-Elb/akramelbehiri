@@ -16,59 +16,63 @@
   <main >
 
     <!--Navigation Bar-->
-    <nav id="navScroll" class="navbar navbar-expand-xl navbar-dark fixed-top " tabindex="0">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary fixed-top" id="navScroll">
+      <div class="container-fluid">
         
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="btn-info"><i class="fas fa-bars" style="color: black;"></i></span>
         </button>
 
-        <ul class="navbar-nav ml-auto">
-          <div class="btn-group py-vh-1">
-            <a href="tel:+971505134521" aria-label="Go to form" class="btn btn-sm btn-info"><i class="fas fa-phone"></i> اتصل</a>
-            <a href="https://buy.stripe.com/test_eVa17GfKsgdMgJa5kk" class="btn btn-sm btn-black">ادفع <i class="fas fa-credit-card"></i></a>
-            <a href="form.html" class="btn btn-sm btn-info">سجل <i class="fas fa-sign-in-alt"></i></a>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a class="navbar-brand" href="index.html">
+              <img src="img/logo.png" class="img-fluid" loading="lazy" style="height:60px">
+            </a></h5>
           </div>
-        </ul>
-
-        <div class="collapse navbar-collapse text-end" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link fs-7 text-black" href="#Services">
-                <span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">خدماتنا</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-7 text-black" href="#Achieve">
-                <span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">نتائجنا</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-7 text-black" href="#Bio">
-                <span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">السيرة الذاتية</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-7 text-black" href="#Video">
-                <span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">فيديو</span>
-              </a>
-            </li>
-            <li class="nav-item" > 
-              <a class="nav-link fs-7 text-black" href="#Price">
-                <span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">تميزنا</span>
-              </a>
-            </li>
-          </ul>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav">
+              <div class="btn-group btn-group-sm py-vh-1">
+                <a href="tel:+971505134521" aria-label="Go to form" class="btn btn-info"><i class="fas fa-phone"></i> اتصل</a>
+                <a href="#" class="btn btn-black">ادفع <i class="fas fa-credit-card"></i></a>
+                <a href="form.html" class="btn btn-info">سجل <i class="fas fa-sign-in-alt"></i></a>
+              </div>
+            </ul>
+            <ul class="navbar-nav text-end ms-auto me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link fs-7 text-black" href="index.html#Services">خدماتنا </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-7 text-black" href="index.html#Achieve">نتائجنا </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-7 text-black" href="index.html#Bio"> السيرة الذاتية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-7 text-black" href="index.html#Video"> فيديو </a>
+              </li>
+              <li class="nav-item" > 
+                <a class="nav-link fs-7 text-black" href="index.html#Price"> تميزنا</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <a class="navbar-brand" href="#">
-          <img src="img/logo.png" class="img-fluid" loading="lazy" style="height: 50px">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" class="img-fluid" loading="lazy" style="height: 70px">
         </a>
 
       </div>
     </nav>
     <!--Navigation Bar-->
+
+    <!--Progress bar-->
+    <div class="fixed-top">
+      <div class="progress" style="height: 8px; background-color: transparent;">
+        <div class="progress-bar gradient2" id="proBar"></div>
+      </div>
+    </div>
+    <!--Progress bar-->
     
     <!--Home Section-->
     <div id="Home" class="position-relative" style="background-image: url('img/bg.png'); background-repeat: no-repeat; background-size: cover; background-position: center; overflow-x: hidden; padding-top: 100px;">
@@ -82,7 +86,7 @@
             <h1 class="h1 fw-lighter fw-bold text-white"> للدكتور أكرم البحيري</h1>
           </div>
           <div class="col-12 col-xl-10">
-            <p class="lead text-secondary text-white">حيث نقدم خدمات التدريس المخصصة والفعالة لطلاب الثانوية. يتمتع مدرسنا بسنوات عديدة من الخبرة وسجل حافل في مساعدة الطلاب على تحقيق أهدافهم الأكاديمية. نحن نتفهم أن كل طالب فريد من نوعه ، وهذا هو السبب في أننا نصمم نهجنا ليناسب الاحتياجات الفردية وأسلوب التعلم لكل طالب</p>
+            <p class="lead text-secondary text-white">حيث نقدم خدمات التدريس المخصصة والفعالة لطلاب الثانوية. يتمتع مدرسنا بسنوات عديدة من الخبرة وسجل حافل في مساعدة الطلاب على تحقيق أهدافهم الأكاديمية. نحن نتفهم أن كل طالب فريد من نوعه، وهذا هو السبب في أننا نصمم نهجنا ليناسب الاحتياجات الفردية وأسلوب التعلم لكل طالب</p>
           </div>
           <div class="col-12">
             <a href="#Services" class="btn btn-xl btn-info">تعرف على خدماتنا  <i class="fas fa-arrow-down"></i></a>
@@ -108,13 +112,12 @@
             <p class="text-secondary" data-aos="fade">نقدم أوراق عمل مفصلة حول الموضوع الذي يتم تناوله في جلسات التدريس الخاصة بنا ، لمساعدة الطلاب على مراجعة وتعزيز فهمهم للمفاهيم الأساسية<br>
             </p>
             <h3 class="border-top border-secondary pt-5 mt-5"data-aos="fade">حصص مباشرة و مسجلة <i class="fas fa-video"></i></h3>
-            <p class="text-secondary" data-aos="fade">بالإضافة إلى الحصص المباشرة التفاعلية بين الطلاب والمعلم مما يسمح للطلاب بطرح الأسئلة وتلقي التعليقات الفورية، نقدم أيضًا جلسات فيديو مسجلة لتوفير إمكانية المراجعة حسب إحتياجات الطالب. <br>
+            <p class="text-secondary" data-aos="fade">بالإضافة إلى الحصص المباشرة التفاعلية بين الطلاب والمعلم مما يسمح للطلاب بطرح الأسئلة وتلقي التعليقات الفورية، نقدم أيضًا جلسات فيديو مسجلة لتوفير إمكانية المراجعة حسب إحتياجات الطالب <br>
             </p>
             <h3 class="border-top border-secondary pt-5 mt-5"data-aos="fade">الإمتحانات الإلكترونية <i class="fas fa-square-root-alt"></i></h3>
             <p class="text-secondary" data-aos="fade">نحن نقدم مجموعة من الإمتحانات الإلكترونية والتمارين لمساعدة الطلاب على تعزيز تعلمهم وتطوير مهاراتهم في حل الإمتحانات<br>
             </p>  
           </div>
-
         </div>
       </div>
     </div>
@@ -193,10 +196,10 @@
               <p class="h4 fw-lighter text-secondary">لدينا معدل مرتفع لرضا الطلاب، حيث أفاد أكثر من %96 من طلابنا بأنهم سيوصون الآخرين بخدماتنا</p>
             </div>
 
-            <div class="col-12 col-lg-4 d-flex align-items-center bg-lightop shadow rounded-5 p-0 aos-init aos-animate" data-aos="zoom-in-up">
+            <div class="col-12 col-lg-4 bg-lightop shadow rounded-5 p-0 aos-init aos-animate" data-aos="zoom-in-up">
               <div class="row d-flex justify-content-center">
                 <div class="col-12">
-                <img src="img/img.jpg" class="img-fluid rounded-5" loading="lazy">
+                  <img src="img/img.jpg" class="img-fluid rounded-5" loading="lazy">
                 </div>
                 <div class="col-12 col-lg-10 text-center my-3">
                   <p class="text-secondary text-center">د/ أكرم البحيري</p>
@@ -211,12 +214,12 @@
     <!--Bio Section-->
 
     <!--Video Section-->
-    <div id="Form" class="py-vh-3">
+    <div id="Video" class="py-vh-3">
       <div class="container bg-black position-relative px-vw-5 py-vh-3 rounded-5 shadow" data-aos="fade-up">
         <div class="row d-flex">
           <h1 class="h1 fw-lighter text-center text-white">إليك مقطع فيديو مجاني لأحد دروسنا التي نقدمها</h1>
           <div class="col-12 px-vw-5" data-aos="fade-up">
-            <video class="w-100 rounded-5" controls poster="img/tn.jpg">
+            <video class="w-100 rounded-5" controls poster="img/tn.jpg" preload="none">
             <source src="img/vid5.mp4" type="video/mp4">Your browser does not support the video tag.</video>
           </div>
         </div>
@@ -240,7 +243,8 @@
           
             <div class="btn-group py-vh-1">
               <a href="https://wa.me/971505134521" class="btn btn-xl btn-info"><i class="fa-brands fa-whatsapp"></i> للاستفسارات</a>
-              <a href="https://buy.stripe.com/test_eVa17GfKsgdMgJa5kk" class="btn btn-xl btn-black">للدفع <i class="fas fa-credit-card"></i></a>
+              <a href="" class="btn btn-xl btn-black">للدفع <i class="fas fa-credit-card"></i></a>
+              <a href="form.html" class="btn btn-xl btn-info">للتسجيل <i class="fas fa-sign-in-alt"></i></a>
             </div>
           </div>
           
@@ -255,53 +259,52 @@
   <!--Footer Section-->
   <footer>
     <div class="container small border-top" >
-      <div class="row py-5 d-flex justify-content-between text-end">
+      <div class="row py-3 d-flex justify-content-between text-end">
         
-        <div class="col-12 col-lg-6 col-xl-3 p-2">
-          <ul class="nav d-flex">
-            <a class="nav-item" href="#">
-              <img src="img/logo.png" class="img-fluid" loading="lazy" style="height: 100px;">
-            </a>
-            <p class="text-secondary py-5">Committed to quality learning.</p>
-          </ul>
+        <div class="col-12 col-sm-3 col-lg-3 col-xl-3 mx-n3 py-2">
+          <a class="nav-item" href="index.html">
+            <img src="img/logo.png" class="img-fluid" loading="lazy" style="height: 100px;">
+          </a>
+          <p class="text-secondary mt-3">Commited to quality learning.</p>
         </div>
 
-        <div class="col-12 col-lg-6 col-xl-3 p-2">
+        <div class="col-12 col-sm-4 col-lg-4 col-xl-4 mx-n3 py-2">
           <h3 class="h6 mb-3">موقعنا</h3>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link link-secondary ps-0" href="#Services">خدماتنا</a>
+              <a class="nav-link link-secondary ps-0" href="index.html#Services">خدماتنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-secondary ps-0" href="#Bio">السيرة الذاتية</a>
+              <a class="nav-link link-secondary ps-0" href="index.html#Achieve">نتائجنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-secondary ps-0" href="#Achieve">نتائجنا</a>
+              <a class="nav-link link-secondary ps-0" href="index.html#Bio">السيرة الذاتية</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-secondary ps-0" href="#Achieve">فيديو</a>
+              <a class="nav-link link-secondary ps-0" href="index.html#Achieve">فيديو</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-secondary ps-0" href="#Price">أسعارنا</a>
+              <a class="nav-link link-secondary ps-0" href="index.html#Price">تميزنا</a>
             </li>
           </ul>
         </div>
 
-        <div class="col-12 col-lg-6 col-xl-3 p-2">
-          <h3 class="h6 mb-3">معلومات الاتصال</h3>
+        <div class="col-12 col-sm-5 col-lg-5 col-xl-5 mx-n3 py-2">
+          <h3 class="h6 mb-3">معلومات الاتصال</h3> 
           <ul class="nav flex-column">
             <li class="nav-item text-secondary mt-3">
-              <p><i class="fas fa-home"></i> Abu Dhabi <br> United Arab Emirates</p>
-              <p><i class="fas fa-envelope"></i>  a.elbeheery@hotmail.com</p>
-              <p><i class="fas fa-phone"></i> +971 505134521</p>
-              <p><i class="fa-brands fa-whatsapp"></i> +971 505134521</p>
+              <p><i class="fas fa-home"></i><br> Abu Dhabi <br> United Arab Emirates</p>
+              <p>+971 505134521   <i class="fas fa-phone"></i></p>
+              <p>+971 505134521   <i class="fa-brands fa-whatsapp"></i></p>
             </li>
           </ul>
         </div>
+        
+        
       </div>
     </div>
 
-    <div class="container border-top text-center py-3 small">.أكرم البحيري. كل الحقوق محفوظة <i class="fa-regular fa-copyright"></i> Copyright 2023</div>
+    <div class="container border-top text-center py-3 small"> <i class="fa-regular fa-copyright"></i> 2023 Akram Elbehiri. All rights reserved.</div>
   </footer>
   <!--Footer Section-->
 
