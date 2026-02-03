@@ -4002,7 +4002,7 @@ textarea.form-control-lg {
 
 .navbar.scrolled {
   --bs-bg-opacity: 0.5;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
   backdrop-filter: blur(8px);
 }
 
