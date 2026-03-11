@@ -24,6 +24,6 @@
         }, 5000);
     }).catch(error => {
         console.error('Error:', error);
-        alert('There was an error submitting the form.');
+        alert('There was an error submitting the form | حدث خطأ أثناء إرسال إستمارة التسجيل');
     });
 });
